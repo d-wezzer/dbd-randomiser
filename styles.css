@@ -1,0 +1,110 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  height: 100%;
+  margin: 0;
+}
+
+button {
+  background-color: #ff3300;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e62e00;
+}
+
+/* Output Info */
+#waitForUserInput {
+  display: flex;
+}
+
+#tooManySurvivors {
+  display: none;
+}
+
+#perksOutput {
+  min-height: 100%;
+  display: none;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+/* Player Panes */
+.player-pane {
+  display: flex;
+  flex-direction: column;
+  /* Change to column to stack the two columns */
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  padding: 10px;
+  margin: 10px;
+  /* Adjust this value to your desired width */
+  border: 1px solid #ccc;
+  color: #1a1a1a;
+  width: 20%;
+  /* Adjust this value to your desired initial width */
+}
+
+.survivor {
+  background-color: #f0f0f0;
+}
+
+.killer {
+  background-color: #e62e00;
+}
+
+.perk-table {
+  width: 100%;
+}
+
+.perk-table td {
+  padding: 5px;
+  text-align: left;
+  border-bottom: 1px solid #fff;
+  /* Adjust this value as needed */
+}
+
+.header-separator {
+  border: 1px solid #fff;
+  /* Adjust this value as needed */
+  margin: 10px 0;
+  /* Adjust this value as needed */
+}
+
+.perk-column {
+  flex: 1;
+  /* Equal flex distribution for both columns */
+  margin-right: 10px;
+  /* Adjust this value for spacing between columns */
+}
+
+.perk-names,
+.perk-descriptions {
+  flex: 1;
+  /* Equal flex distribution for both columns */
+}
+
+/* Banners */
+.banner {
+  width: fit-content;
+  color: #1a1a1a;
+  padding: 5px;
+  margin: 10px;
+}
+
+.stable {
+  background-color: #ccc;
+}
+
+.error {
+  background-color: #ff3300;
+}

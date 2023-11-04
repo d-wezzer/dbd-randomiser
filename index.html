@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Dead by Daylight Random Perk Generator</title>
+</head>
+
+<body>
+  <div id="app">
+    <label for="numSurvivors">Number of Survivors:</label>
+    <input type="number" id="numSurvivors" min="1" max="4" value="1">
+
+    <label for="includeKiller">Include Killer:</label>
+    <input type="checkbox" id="includeKiller">
+
+    <button onclick="generatePerks()">Generate Perks</button>
+
+    <div id="waitForUserInput">
+      <!-- Waiting for Selection -->
+      <div class="banner stable">
+        <strong>Enter the required number of survivors to generate perks for survivors. Check killer checkbox to toggle
+          generation of perks for the killer.</strong>
+      </div>
+    </div>
+
+    <div id="tooManySurvivors">
+      <!-- Too Many Survivors Selected -->
+      <div class="banner error">
+        <strong>Too many survivors selected. [Min: 0, Max: 4]</strong>
+      </div>
+    </div>
+
+    <div id="perksOutput">
+      <!-- Survivor 1 -->
+      <div class="player-pane survivor" id="survivor1">
+        <strong>Survivor 1:</strong>
+        <div class="perk-names perk-column">
+          <!-- Perk names go here -->
+        </div>
+        <div class="perk-descriptions perk-column">
+          <!-- Perk descriptions go here -->
+        </div>
+      </div>
+
+      <!-- Survivor 2 -->
+      <div class="player-pane survivor" id="survivor2">
+        <strong>Survivor 2:</strong>
+        <div class="perk-names perk-column">
+          <!-- Perk names go here -->
+        </div>
+        <div class="perk-descriptions perk-column">
+          <!-- Perk descriptions go here -->
+        </div>
+      </div>
+
+      <!-- Survivor 3 -->
+      <div class="player-pane survivor" id="survivor3">
+        <strong>Survivor 3:</strong>
+        <div class="perk-names perk-column">
+          <!-- Perk names go here -->
+        </div>
+        <div class="perk-descriptions perk-column">
+          <!-- Perk descriptions go here -->
+        </div>
+      </div>
+
+      <!-- Survivor 4 -->
+      <div class="player-pane survivor" id="survivor4">
+        <strong>Survivor 4:</strong>
+        <div class="perk-names perk-column">
+          <!-- Perk names go here -->
+        </div>
+        <div class="perk-descriptions perk-column">
+          <!-- Perk descriptions go here -->
+        </div>
+      </div>
+
+      <!-- Killer -->
+      <div class="player-pane killer" id="killer">
+        <strong>Killer:</strong>
+        <div class="perk-names perk-column">
+          <!-- Perk names go here -->
+        </div>
+        <div class="perk-descriptions perk-column">
+          <!-- Perk descriptions go here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js" async defer></script>
+</body>
+
+</html>
